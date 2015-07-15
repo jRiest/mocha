@@ -8,9 +8,8 @@ setTimeout(function() {
     });
 
     it('should have no effect if attempted twice in the same suite', function() {
-      assert(true);
       run();
-      assert(true);
+      assert(new Date().getTime() - delay < start + delay);
     });
   });
 
